@@ -1,0 +1,34 @@
+﻿{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "name": "inputTable",
+      "direction": "in",
+      "type": "table",
+      "tableName": "ShoppingListTable",
+      "take": 50,
+      "connection": "storageforproj_STORAGE"
+    },
+    {
+      "name": "outputTable",
+      "direction": "out",
+      "type": "table",
+      "tableName": "ShoppingListTable",
+      "connection": "storageforproj_STORAGE"
+    }
+  ]
+}
