@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-07-22T11:17:26.700Z" agent="5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="AmdlghAYord12eUwXKwz" version="14.9.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-07-22T11:20:15.704Z" agent="5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Safari/537.36" etag="BqKwgXOTQRhAbjUx8iJs" version="14.9.1" type="github">
   <diagram id="8ljtNmb3gO-Bhcg98QSJ" name="Page-1">
     <mxGraphModel dx="868" dy="393" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -14,33 +14,28 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-3" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;span style=&quot;font-size: 17px&quot;&gt;&lt;i&gt;opens&lt;/i&gt;&lt;/span&gt; barcode scanner&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;direction=west;strokeWidth=4;fillColor=#9933FF;gradientColor=#CC99FF;fontStyle=1;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;" vertex="1" parent="1">
-          <mxGeometry x="25" y="160" width="130" height="80" as="geometry" />
+          <mxGeometry x="25" y="165" width="130" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="UISaJpvEiNDoS0qOSnQJ-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;strokeWidth=3;" edge="1" parent="1" source="UISaJpvEiNDoS0qOSnQJ-4" target="UISaJpvEiNDoS0qOSnQJ-5">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="308" y="165" />
-              <mxPoint x="308" y="138" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="UISaJpvEiNDoS0qOSnQJ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;strokeWidth=3;" edge="1" parent="1" source="UISaJpvEiNDoS0qOSnQJ-4" target="UISaJpvEiNDoS0qOSnQJ-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-4" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;i&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;scans&lt;/font&gt;&lt;/i&gt; barcode &amp;amp; &lt;br&gt;gets bacode number&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;direction=west;strokeWidth=4;fillColor=#9933FF;gradientColor=#CC99FF;fontStyle=1;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;" vertex="1" parent="1">
-          <mxGeometry x="240" y="165" width="140" height="70" as="geometry" />
+          <mxGeometry x="247.5" y="165" width="140" height="70" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.944;entryY=0.611;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;strokeWidth=3;" edge="1" parent="1" source="UISaJpvEiNDoS0qOSnQJ-5" target="UISaJpvEiNDoS0qOSnQJ-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-5" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;&lt;i&gt;calls &lt;/i&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;an HTTP fucntion&lt;br&gt;&amp;nbsp;with barcode number&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;direction=west;strokeWidth=4;fillColor=#9933FF;gradientColor=#CC99FF;fontStyle=1;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;" vertex="1" parent="1">
-          <mxGeometry x="230" y="20" width="155" height="90" as="geometry" />
+          <mxGeometry x="232.5" y="30" width="155" height="70" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;strokeWidth=3;" edge="1" parent="1" source="UISaJpvEiNDoS0qOSnQJ-6" target="UISaJpvEiNDoS0qOSnQJ-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-6" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;font&gt;&lt;i&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;s&lt;/font&gt;&lt;font style=&quot;font-size: 17px&quot;&gt;earches&lt;/font&gt; &lt;/i&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;through database&lt;br&gt;&amp;nbsp;to find product name&lt;br&gt;&amp;nbsp;with given barcode&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;direction=west;strokeWidth=4;fillColor=#9933FF;gradientColor=#CC99FF;fontStyle=1;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;" vertex="1" parent="1">
-          <mxGeometry x="460" y="30" width="180" height="90" as="geometry" />
+          <mxGeometry x="460" y="20" width="180" height="90" as="geometry" />
         </mxCell>
         <mxCell id="UISaJpvEiNDoS0qOSnQJ-7" value="&lt;font face=&quot;Times New Roman&quot;&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;i&gt;adds &lt;/i&gt;&lt;/font&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;product to the inventory azure table&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;shadow=1;direction=west;strokeWidth=4;fillColor=#9933FF;gradientColor=#CC99FF;fontStyle=1;fontSize=13;fontColor=#FFFFFF;strokeColor=#00C7C7;" vertex="1" parent="1">
-          <mxGeometry x="470" y="170" width="160" height="70" as="geometry" />
+          <mxGeometry x="470" y="190" width="160" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
