@@ -1,0 +1,12 @@
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/bin/Release/netstandard2.0/CounterApp.deps.json
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/bin/Release/netstandard2.0/CounterApp.dll
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/bin/Release/netstandard2.0/CounterApp.pdb
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.csprojAssemblyReference.cache
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/App.xaml.g.cs
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/MainPage.xaml.g.cs
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.AssemblyInfoInputs.cache
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.AssemblyInfo.cs
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.csproj.CoreCompileInputs.cache
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/XamlC.stamp
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.dll
+/Users/neoeyal/Desktop/skel/Skeleton-Project_2021/01 Mobile App/Basic/CounterApp/CounterApp/obj/Release/netstandard2.0/CounterApp.pdb

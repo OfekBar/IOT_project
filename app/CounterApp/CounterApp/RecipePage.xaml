@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.RecipePage"
+             Title="Recepies"
+             BackgroundColor="White"
+             >
+    <ContentPage.BindingContext>
+        <local:RecipePageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
+
+                  <Button
+                    CornerRadius="25"
+                    WidthRequest="100"
+                    HeightRequest="100"
+                    FontSize="Large"
+                    Text="Get Recepies"
+                  
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    Command="{Binding GetRecipeCommand}"                 
+                    VerticalOptions="Center"
+                    Padding="0"
+                   
+                
+                  />
+                    
+              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="White" SeparatorColor="Transparent" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,10">
+
+                                         <CheckBox x:Name="CheckBox" CheckedChanged="OnCheckClick" BindingContext="{Binding Name}">
+
+                                         </CheckBox>
+
+                                         <Label
+                                            
+                                             WidthRequest="300"
+                                             Text="{Binding Name}"
+                                             HorizontalOptions="Fill"
+                                             FontSize="Large"
+                                             FontAttributes="Bold"
+                                             Margin="0,0"
+                                             TextColor="Black"
+                                             VerticalOptions="Center"
+                                         />
+
+
+
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            
+
+        </StackLayout>
+  </StackLayout>
+
+</ContentPage>

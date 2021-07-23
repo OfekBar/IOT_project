@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.RecipesUrlsPage"
+             Title="Recipes Urls"
+             BackgroundColor="White"
+             >
+    <ContentPage.BindingContext>
+        <local:RecipesUrlsPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+
+        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
+             <ListView x:Name="MyList" ItemsSource="{Binding UrlList}" BackgroundColor="White" SeparatorColor="Transparent" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,10">
+                                         <Label
+                                             WidthRequest="300"
+                                             Text="{Binding Name}"
+                                             HorizontalOptions="Fill"
+                                             FontSize="Large"
+                                             FontAttributes="Bold"
+                                             Margin="0,0"
+                                             TextColor="Black"
+                                             VerticalOptions="Center"
+                                         />
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>

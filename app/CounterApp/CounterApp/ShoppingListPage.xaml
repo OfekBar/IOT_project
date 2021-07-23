@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.ShoppingListPage"
+             Title="Shopping List"
+             BackgroundColor="White"
+             >
+    <ContentPage.BindingContext>
+        <local:ShoppingListPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <StackLayout x:Name="MainLayout" Margin="0, 0" BackgroundColor="White">
+        
+             
+          <Button
+                CornerRadius="25"
+                Text="Add To Shopping list"
+                FontSize="Large"
+                BackgroundColor="MediumPurple"
+                TextColor="White"
+                Command="{Binding AddCommand}"
+                CommandParameter="none"
+                VerticalOptions="Center"
+                Padding="0"
+                WidthRequest="100"
+                HeightRequest="100"
+                
+             />
+        
+              
+              <ListView x:Name="MyList" ItemsSource="{Binding ShoppingList}" BackgroundColor="White" SeparatorColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+
+                                    <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,4">
+
+                                         <Label HeightRequest="1"
+                                                WidthRequest="400"
+                                                Text="{Binding Name}"
+                                                HorizontalOptions="Center"
+                                                FontSize="Large"
+                                                FontAttributes="Bold"
+                                                Margin="0,0"
+                                                TextColor="Black"/>
+
+                                         <Button Text="Remove"
+                                                 BackgroundColor="MediumPurple"
+                                                 TextColor="White"
+                                                 Command="{Binding BindingContext.removeProdClicked, Source={x:Reference Name=MyList}}"
+                                                 CommandParameter="{Binding .}"
+                                                 VerticalOptions="Center"
+                                                 Padding="0"
+                                                 WidthRequest="100"
+                                                 HeightRequest="40"
+                                                 
+                                         />
+
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+           
+
+        </StackLayout >
+
+        
+            
+
+  </StackLayout>
+
+
+</ContentPage>

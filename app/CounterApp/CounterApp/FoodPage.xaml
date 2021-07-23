@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.FoodPage"
+             Title="Inventory"
+             BackgroundColor="White"
+             >
+    <ContentPage.BindingContext>
+        <local:FoodPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
+    
+
+              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="White" SeparatorColor="Transparent" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,4">
+
+                                         <Label
+                                             WidthRequest="300"
+                                             Text="{Binding Name}"
+                                             HorizontalOptions="Fill"
+                                             FontSize="Large"
+                                             FontAttributes="Bold"
+                                             Margin="0,0"
+                                             TextColor="Black"
+                                             VerticalOptions="Center"
+                                         />
+
+ 
+                                         <Label
+                                             HorizontalTextAlignment="End"
+                                             WidthRequest="50"
+                                             Text="{Binding Amount}"
+                                             HorizontalOptions="End"
+                                             Margin="12,0"
+                                             TextColor="black"
+                                             VerticalOptions="Center"
+                                         />
+
+                                         <!--<Label Text="{Binding Barcode}" HorizontalOptions="Center"  Margin="0,5" TextColor="Aqua"/> -->
+                                        
+                                         <Button Text="+"
+                                                 BackgroundColor="MediumPurple"
+                                                 TextColor="white"
+                                                 Command="{Binding BindingContext.IncProdAmountClicked, Source={x:Reference Name=MyList}}"
+                                                 CommandParameter="{Binding .}"
+                                                 FontSize="32"
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="End"
+                                                 Padding="0"
+                                                 WidthRequest="32"
+                                                 HeightRequest="40"
+                                                 Margin="12,0"
+                                                 
+                                         />
+
+                                         <Button Text="-"
+                                                 BackgroundColor="MediumPurple"
+                                                 TextColor="white"
+                                                 Command="{Binding BindingContext.DecProdAmountClicked, Source={x:Reference Name=MyList}}"
+                                                 CommandParameter="{Binding .}"
+                                                 FontSize="32"
+                                                 VerticalOptions="Center"
+                                                 HorizontalOptions="End"
+                                                 Padding="0"
+                                                 WidthRequest="32"
+                                                 HeightRequest="40"
+                                                
+                                         />
+
+                                    </StackLayout>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+        </StackLayout>
+  </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CounterApp"
+             x:Class="CounterApp.MainPage"
+             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
+             Title="Smart Fridge"
+             BackgroundColor="Black"
+             
+             >
+    <ContentPage.BindingContext>
+        <local:MainViewModel x:Name="mainViewModel"/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <zxing:ZXingScannerView x:Name="BarcodeScanView" IsVisible="false" HeightRequest="200" OnScanResult="OnScanResult" />
+ 
+        <StackLayout x:Name="MainLayout" Margin="0,20" >
+       
+            <!--
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Counter 1: " FontSize="Medium" TextColor="DarkGray" VerticalOptions="Center"/>
+                <Label Text="{Binding Counter1}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Button Text="Increment" BackgroundColor="Blue" TextColor="White" Command="{Binding IncrementCounterCommand}" CommandParameter="0" VerticalOptions="Center" Padding="0" WidthRequest="100"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Counter 2: " FontSize="Medium" TextColor="DarkGray" VerticalOptions="Center"/>
+                <Label Text="{Binding Counter2}" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Button Text="Increment" BackgroundColor="Blue" TextColor="White" Command="{Binding IncrementCounterCommand}" CommandParameter="1" VerticalOptions="Center" Padding="0" WidthRequest="100"/>
+            </StackLayout>
+            -->
+
+    
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
+                <Button
+                    CornerRadius="25"
+                    WidthRequest="380"
+                    HeightRequest="120"
+                    FontSize="Large"
+                    Text="Scan Product"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    Clicked="OnScanBarcodeClicked"
+                    CommandParameter="3"
+                    VerticalOptions="Center"
+                    Padding="0"
+                    
+                />      
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
+                <Button
+                    CornerRadius="25"
+                    WidthRequest="380"
+                    HeightRequest="120"
+                    FontSize="Large"
+                    Text="Inventory"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    Clicked="OnFoodButtonClicked"
+                    CommandParameter="3"
+                    VerticalOptions="Center"
+                    Padding="0"
+                  
+                />      
+            </StackLayout>
+
+             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
+                <Button
+                    CornerRadius="25"
+                    WidthRequest="380"
+                    HeightRequest="120"
+                    FontSize="Large"
+                    Text="Shopping List"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    Clicked="OnShoppingListButtonClicked"
+                    CommandParameter="3"
+                    VerticalOptions="Center"
+                    Padding="0"
+                 
+                />      
+            </StackLayout>
+
+
+              <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
+                <Button
+                    CornerRadius="25"
+                    WidthRequest="380"
+                    HeightRequest="120"
+                    FontSize="Large"
+                    Text="Recepies"
+                    BackgroundColor="MediumPurple"
+                    TextColor="White"
+                    Clicked="OnRecepiesClicked"
+                    CommandParameter="3"
+                    VerticalOptions="Center"
+                    Padding="0"
+                    
+                />      
+            </StackLayout>
+
+
+        </StackLayout>
+  </StackLayout>
+
+</ContentPage>
