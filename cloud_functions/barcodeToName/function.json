@@ -1,0 +1,27 @@
+﻿{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "name": "inputTable",
+      "tableName": "xlbarcodes",
+      "take": 50,
+      "connection": "storageforproj_STORAGE",
+      "direction": "in",
+      "type": "table"
+    }
+  ]
+}

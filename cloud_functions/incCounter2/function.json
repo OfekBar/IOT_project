@@ -1,0 +1,27 @@
+﻿{
+  "bindings": [
+    {
+      "name": "myEvent",
+      "connection": "eventHubNamePsaceName_Neo_EVENTHUB",
+      "eventHubName": "myeventhub",
+      "consumerGroup": "$Default",
+      "direction": "in",
+      "type": "eventHubTrigger"
+    },
+    {
+      "name": "inputTable",
+      "direction": "in",
+      "type": "table",
+      "tableName": "myTable",
+      "take": 50,
+      "connection": "storageforproj_STORAGE"
+    },
+    {
+      "name": "outputTable",
+      "direction": "out",
+      "type": "table",
+      "tableName": "myTable",
+      "connection": "storageforproj_STORAGE"
+    }
+  ]
+}

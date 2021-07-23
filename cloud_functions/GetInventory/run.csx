@@ -33,11 +33,14 @@ public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log, 
     var query = new TableQuery<Item>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "product"));
     //var results = await inputTable.ExecuteQuerySegmentedAsync(query, ct);
 
+
     do {
         var response = await inputTable.ExecuteQuerySegmentedAsync(query, ct);
         ct = response.ContinuationToken;
+        log.LogInformation("*****"+response.Results[0].name);
         results.AddRange(response.Results);
     } while(ct != null);
+
 
     //var myObj = new { products = results};
     var jsonToReturn = JsonConvert.SerializeObject(results);
