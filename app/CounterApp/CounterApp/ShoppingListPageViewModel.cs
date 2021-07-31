@@ -1,5 +1,5 @@
 ﻿/**
- * logic of food page 
+ * logic of shopping list page 
 **/
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -35,7 +35,7 @@ namespace CounterApp
     public class ShoppingListPageViewModel : INotifyPropertyChanged
     {
 
-        //functions from xmal
+        //binding commands of buttons to add/remove products
         public ICommand removeProdClicked { get; private set; }
         public ICommand AddCommand { get; }
 
@@ -66,9 +66,9 @@ namespace CounterApp
 
                 await Task.Run(async () => {
                     var url = removeURL + p1.Name;
-                    Console.WriteLine(p1.Name);
+                    //Console.WriteLine(p1.Name);
                     HttpResponseMessage result = CallUrl(url).Result;
-                    Console.WriteLine(result.StatusCode);
+                    //Console.WriteLine(result.StatusCode);
                     this.ShoppingList = ReadList().Result;
                 });
             });
@@ -88,7 +88,6 @@ namespace CounterApp
                 {
                    //Console.WriteLine(ex);
                 }
-
             });
         }
 
@@ -106,10 +105,10 @@ namespace CounterApp
             //List<Product> pr = new List<Product>{ new Product("Milk", 30) , new Product("eggs", 2), new Product("cheese", 1) };
             HttpResponseMessage result = CallUrl(getListURL).Result;
             string jsonData = await result.Content.ReadAsStringAsync();
-            Console.WriteLine(jsonData);
+            //Console.WriteLine(jsonData);
             List<ProductName> pr = JsonSerializer.Deserialize<List<ProductName>>(jsonData);
-            Console.WriteLine(result.StatusCode);
-            Console.WriteLine(pr[0].Name);    
+            //Console.WriteLine(result.StatusCode);
+            //Console.WriteLine(pr[0].Name);    
             return pr;
         }
 
@@ -117,38 +116,32 @@ namespace CounterApp
         // button hanlder for adding new item to list
         private void AddFunc(string parameter)
         {
-            Console.WriteLine("Add " + parameter);
+            //Console.WriteLine("Add " + parameter);
             string result;
             MainThread.InvokeOnMainThreadAsync(async () =>
             {
                 result = await App.Current.MainPage.DisplayPromptAsync("Adding", "What do you want do add?");
-
-                Console.WriteLine(result);
-
+                //Console.WriteLine(result);
                 //task to not freeze app
                 var task = Task.Run(async () =>
                 {           
                     try
                     {
-
                         var URL = addURL;
                         URL += result;
                         Console.WriteLine(URL);
                         HttpResponseMessage respsone = CallUrl(URL).Result;
                         string jsonData = await respsone.Content.ReadAsStringAsync();
-
                         bool added = JsonSerializer.Deserialize<bool>(jsonData);
-
-                        Console.WriteLine(added);
+                        //Console.WriteLine(added);
                         if (added)
                         {
                             this.ShoppingList = ReadList().Result;
                         }
-
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(ex);
+                        //Console.WriteLine(ex);
                     }          
                 });
             });

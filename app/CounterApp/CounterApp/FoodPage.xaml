@@ -12,8 +12,6 @@
 
     <StackLayout>
         <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
-    
-
               <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="White" SeparatorColor="Transparent" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -32,7 +30,6 @@
                                              VerticalOptions="Center"
                                          />
 
- 
                                          <Label
                                              HorizontalTextAlignment="End"
                                              WidthRequest="50"
@@ -71,7 +68,6 @@
                                                  Padding="0"
                                                  WidthRequest="32"
                                                  HeightRequest="40"
-                                                
                                          />
 
                                     </StackLayout>

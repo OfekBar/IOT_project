@@ -7,14 +7,13 @@ using ZXing;
 using Xamarin.Essentials;
 using System.Collections.Generic;
 
-//ui for food page
+//ui for recipies we get page
 namespace CounterApp
 {
     public partial class RecipesUrlsPage : ContentPage
     {
-       
-
-        public RecipesUrlsPage(System.Collections.Generic.List<RecipeUrl> recipiesUrls)
+      
+        public RecipesUrlsPage(List<RecipeUrl> recipiesUrls)
         {
             InitializeComponent();
             this.BindingContext = new RecipesUrlsPageViewModel(recipiesUrls);

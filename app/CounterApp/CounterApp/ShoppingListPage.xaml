@@ -11,9 +11,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <StackLayout x:Name="MainLayout" Margin="0, 0" BackgroundColor="White">
-        
-             
+        <StackLayout x:Name="MainLayout" Margin="0, 0" BackgroundColor="White">     
           <Button
                 CornerRadius="25"
                 Text="Add To Shopping list"
@@ -25,17 +23,14 @@
                 VerticalOptions="Center"
                 Padding="0"
                 WidthRequest="100"
-                HeightRequest="100"
-                
+                HeightRequest="100"          
              />
-        
-              
+          
               <ListView x:Name="MyList" ItemsSource="{Binding ShoppingList}" BackgroundColor="White" SeparatorColor="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
-
                                     <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,4">
 
                                          <Label HeightRequest="1"
@@ -65,14 +60,6 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-           
-
         </StackLayout >
-
-        
-            
-
   </StackLayout>
-
-
 </ContentPage>

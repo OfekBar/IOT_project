@@ -11,23 +11,24 @@ using System.Text.Json.Serialization;
 using ZXing;
 using Xamarin.Essentials;
 
+/**
+ * logic of main page of app
+ **/
 
+namespace CounterApp {
 
-namespace CounterApp
-{
-
-    /**
+    /** skeleton project code- not deleting because code is useful
     public class CountersData
     {
         public int v1 { get; set; }
         public int v2 { get; set; }
     }**/
 
-    public class MainViewModel : INotifyPropertyChanged
-    {
+    public class MainViewModel : INotifyPropertyChanged {
         static HttpClient client = new HttpClient();
 
-        /**static string updateURL = "https://functionappinportal.azurewebsites.net/api/UpdateCounter?";
+        /** skeleton project code- not deleting because code is useful
+         * static string updateURL = "https://functionappinportal.azurewebsites.net/api/UpdateCounter?";
         static string readCounterUrl = "https://functionappinportal.azurewebsites.net/api/getCounterHTTP";
         HubConnection connection;
 
@@ -53,7 +54,7 @@ namespace CounterApp
 
         public MainViewModel()
         {
-            /**
+            /** skeleton project code- not deleting because code is useful
             IncrementCounterCommand = new Command<string>(IncrementCounterById);
 
             Console.WriteLine("Connecting...");
@@ -116,13 +117,13 @@ namespace CounterApp
             return JsonSerializer.Deserialize<CountersData>(jsonData);
         **/
         }
-        
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        /**
+        /** skeleton project code- not deleting because code is useful
         private void IncrementCounterById(string counterId)
         {
             Console.WriteLine("IncrementById: " + counterId);
@@ -154,6 +155,7 @@ namespace CounterApp
         }
         **/
 
+        //calls the url in the input- helper function
         public async Task<HttpResponseMessage> CallUrl(string url)
         {
             Console.WriteLine(url);
@@ -170,21 +172,20 @@ namespace CounterApp
             return true;
         }
 
+        //base url for adding product to inventory when scanned via barcode
         static string BaseURL = "https://functionappinportal.azurewebsites.net/api/Add_product_to_list?barcode_input_number=";
 
         //callback function- when scanner retunrs result returns it to here
         public void ProcessBarcodeResult(ZXing.Result result)
         {
-            Console.WriteLine(result.Text); // decoded text
-
+            //Console.WriteLine(result.Text); 
             string myUrl = BaseURL + result.Text;
             var task = Task.Run(async () =>
             {
                 HttpResponseMessage httpResult = CallUrl(myUrl).Result;
-                Console.WriteLine(httpResult.StatusCode);
-
+                //Console.WriteLine(httpResult.StatusCode);
                 string jsonData = await httpResult.Content.ReadAsStringAsync();
-                Console.WriteLine(JsonSerializer.Deserialize<string>(jsonData));
+                //Console.WriteLine(JsonSerializer.Deserialize<string>(jsonData));
             });
           
         }

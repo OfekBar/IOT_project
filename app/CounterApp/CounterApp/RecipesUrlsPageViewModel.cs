@@ -1,5 +1,5 @@
 ﻿/**
- * food page logic
+ * recipies we get page logic
 **/
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -43,22 +43,23 @@ namespace CounterApp
             set => SetProperty(ref _urlList, value);
         }
 
+       
         // constructor
         public RecipesUrlsPageViewModel(List<RecipeUrl> urlList)
         {
                    
-                    this.UrlList = urlList;   
+                    this.UrlList = urlList;
                     Console.WriteLine(UrlList[0].Name);
+                    Console.WriteLine("------");
                     Console.WriteLine(UrlList[1].Name);
-                    Console.WriteLine("done1");
-
+                    //Console.WriteLine("done1");
         }
 
         // constructor
         public RecipesUrlsPageViewModel()
         {
             //UrlList.Add(new RecipeUrl("from defult"));
-            Console.WriteLine("done2");
+            //Console.WriteLine("done2");
         }
 
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)

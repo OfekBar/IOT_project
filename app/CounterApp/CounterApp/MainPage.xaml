@@ -32,9 +32,6 @@
             </StackLayout>
             -->
 
-    
-
-
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
                     CornerRadius="25"
@@ -47,9 +44,9 @@
                     Clicked="OnScanBarcodeClicked"
                     CommandParameter="3"
                     VerticalOptions="Center"
-                    Padding="0"
-                    
-                />      
+                    Padding="0"      
+                />
+                
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
@@ -83,10 +80,9 @@
                     VerticalOptions="Center"
                     Padding="0"
                  
-                />      
+                />
+                 
             </StackLayout>
-
-
               <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
                     CornerRadius="25"
@@ -99,13 +95,10 @@
                     Clicked="OnRecepiesClicked"
                     CommandParameter="3"
                     VerticalOptions="Center"
-                    Padding="0"
-                    
-                />      
+                    Padding="0"            
+                />
+
             </StackLayout>
-
-
         </StackLayout>
   </StackLayout>
-
 </ContentPage>

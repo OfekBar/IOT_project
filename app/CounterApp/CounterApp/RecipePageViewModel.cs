@@ -1,5 +1,5 @@
 ﻿/**
- * food page logic
+ * recipie page logic
 **/
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -13,18 +13,18 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 
-namespace CounterApp
-{
-    public class RecipePageViewModel : INotifyPropertyChanged
-    {
-        public ICommand GetRecipeCommand { get; private set; }
+namespace CounterApp {
+    public class RecipePageViewModel : INotifyPropertyChanged {
+
+        public ICommand GetRecipeCommand { get; private set; } //binding command for get recipe button 
         static HttpClient client = new HttpClient();
-        static readonly string getProductsURL = "https://functionappinportal.azurewebsites.net/api/GetInventory";
+        static readonly string getProductsURL = "https://functionappinportal.azurewebsites.net/api/GetInventory"; //for http call
+        static readonly string getRecipiesURL = "https://functionappinportal.azurewebsites.net/api/getRecipies?name=";
+
         public event PropertyChangedEventHandler PropertyChanged;
         private List<Product> _products = new List<Product>(); //products in inventory
-
         private HashSet<string> checkedList = new HashSet<string>(); //products that are checked
-        private List<RecipeUrl> recipiesUrls = new List<RecipeUrl>(); //products that are checked
+        private List<RecipeUrl> recipiesList = new List<RecipeUrl>(); //list of recipies that we will get from http function call
 
         public List<Product> Products //products in inventory
         {
@@ -37,30 +37,27 @@ namespace CounterApp
         {
             // callcack for clicking get recepies button
             GetRecipeCommand = new Command<object>(async (object o) => {
-                Console.WriteLine("hello1");
+                //Console.WriteLine("hello1");
                 // in task to not freaze app
                 await Task.Run(async () => {
 
-                    string url = "";
+                    string input = "";
                     foreach(string name in checkedList)
                     {
-  
-                        url += name;
-                        url += ",";
+
+                        input += name;
+                        input += ",";
                     }
-                    url = url.Remove(url.Length - 1);
-                    Console.WriteLine(url);
-                    //HttpResponseMessage result = CallUrl(url).Result;
-                    //update recipies url list
-
-
+                    input = input.Remove(input.Length - 1);
+                    Console.WriteLine(input);
+                    
+                    recipiesList = ReadRecipieList(input).Result; //building list of recipies from api using items from fridge user selected
+                     
                 });
 
-                recipiesUrls = new List<RecipeUrl>(); //products that are checked
-                recipiesUrls.Add(new RecipeUrl("testURL"));
-                recipiesUrls.Add(new RecipeUrl("abcd"));
 
-                await Application.Current.MainPage.Navigation.PushAsync(new RecipesUrlsPage(recipiesUrls));
+                //go to recipies that we got page
+                await Application.Current.MainPage.Navigation.PushAsync(new RecipesUrlsPage(recipiesList));
 
             });
 
@@ -77,6 +74,21 @@ namespace CounterApp
                    //Console.WriteLine(ex);
                 }
             });
+        }
+
+
+        //uses http call that uses api that gets us list of rcipies
+        public async Task<List<RecipeUrl>> ReadRecipieList(string input)
+        {
+            //todo add input to getRecipiesURL and use ofeks http func and not mine
+            string url = getRecipiesURL + input;
+            Console.WriteLine(url);
+            HttpResponseMessage result = CallUrl(url).Result;
+            string jsonData = await result.Content.ReadAsStringAsync();
+            Console.WriteLine(jsonData);
+            List<RecipeUrl> pr = JsonSerializer.Deserialize<List<RecipeUrl>>(jsonData);
+            //Console.WriteLine(result.StatusCode);
+            return pr;
         }
 
         // calls the url in the input
@@ -115,6 +127,8 @@ namespace CounterApp
             return true;
         }
 
+        //function that is called when checking or unchecking product
+        //adds/removes from list of checked items acordiningly
         public void UpdateChecked(string Name)
         {
             if (!checkedList.Contains(Name))

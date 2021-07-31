@@ -2,21 +2,18 @@
 using Xamarin.Forms;
 using Xamarin.Essentials;
 
-//ui for ain page
-namespace CounterApp
-{
-    public partial class MainPage : ContentPage
-    {
-      
-        public MainPage()
-        {
+//ui code for main page
+namespace CounterApp{
+    public partial class MainPage : ContentPage {
+     
+        public MainPage(){
             InitializeComponent();
         }
 
         //scan button handler
         public void OnScanBarcodeClicked(object sender, EventArgs e)
         {
-            //showing cammera
+            //showing cammera and hiding main screen
             MainLayout.IsVisible = false;
             BarcodeScanView.IsVisible = true;
             BarcodeScanView.IsScanning = true;
@@ -40,20 +37,17 @@ namespace CounterApp
             await Navigation.PushAsync(new RecipePage());
         }
 
-
-
-        //call back- called when scanner found scan, adds product to inventory
+        //call backfunction- called when scanner finds a barcode, adds product to inventory
         void OnScanResult(ZXing.Result result)
         {
+            //going back to main screen
             MainThread.BeginInvokeOnMainThread(() =>
             {
                 BarcodeScanView.IsScanning = false;
                 MainLayout.IsVisible = true;
                 BarcodeScanView.IsVisible = false;
             });
-
             mainViewModel.ProcessBarcodeResult(result);
         }
     }
-
 }
