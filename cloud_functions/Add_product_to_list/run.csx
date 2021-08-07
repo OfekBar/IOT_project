@@ -26,9 +26,7 @@ public class Item: TableEntity
 
 
 public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log, CloudTable inputTable, CloudTable outputTable)
-{
-    
-    
+{    
     log.LogInformation("C# HTTP trigger function processed a request..");
  
     string barcode_input_number = req.Query["barcode_input_number"];  
@@ -41,17 +39,22 @@ public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log, 
         string myUrl = BaseURL + barcode_input_number;
         string prodName = null;
 
+
         HttpResponseMessage httpResult = client.GetAsync(myUrl).Result;
         Console.WriteLine(httpResult.StatusCode);
         string jsonData = await httpResult.Content.ReadAsStringAsync();
         prodName = jsonData;
         prodName = prodName.Substring(1,prodName.Length-2);
-  
 
-    //reading table entry we want 
-    TableOperation retrieveOperation = TableOperation.Retrieve<Item>("product",barcode_input_number);
-    TableResult result = await inputTable.ExecuteAsync(retrieveOperation);
- 
+        if(prodName == "not found"){
+            return new HttpResponseMessage(HttpStatusCode.NotFound) {
+               
+            };
+        }
+        //reading table entry we want 
+        TableOperation retrieveOperation = TableOperation.Retrieve<Item>("product",barcode_input_number);
+        TableResult result = await inputTable.ExecuteAsync(retrieveOperation);
+    
      
     if (result.Result == null) {
        var item = new Item();
@@ -82,6 +85,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequest req, ILogger log, 
     var myObj = new {productName = prodName};
     var jsonToReturn = JsonConvert.SerializeObject(myObj);
 
+    
     return new HttpResponseMessage(HttpStatusCode.OK) {
         Content = new StringContent(jsonToReturn, Encoding.UTF8, "application/json")
     };

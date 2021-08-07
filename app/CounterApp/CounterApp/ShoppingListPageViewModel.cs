@@ -15,8 +15,6 @@ using Xamarin.Essentials;
 
 namespace CounterApp
 {
-
-
     public class ProductName
     {
 
@@ -30,7 +28,6 @@ namespace CounterApp
         [JsonPropertyName("RowKey")]
         public string Name { get; set; }
     }
-
 
     public class ShoppingListPageViewModel : INotifyPropertyChanged
     {

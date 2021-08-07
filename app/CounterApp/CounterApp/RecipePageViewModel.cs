@@ -48,17 +48,24 @@ namespace CounterApp {
                         input += name;
                         input += ",";
                     }
-                    input = input.Remove(input.Length - 1);
+                    if (checkedList.Count != 0)
+                    {
+                        input = input.Remove(input.Length - 1);
+                    }
                     Console.WriteLine(input);
                     
                     recipiesList = ReadRecipieList(input).Result; //building list of recipies from api using items from fridge user selected
                      
                 });
 
-
-                //go to recipies that we got page
-                await Application.Current.MainPage.Navigation.PushAsync(new RecipesUrlsPage(recipiesList));
-
+                if (checkedList.Count == 0)
+                {
+                    Console.WriteLine("none checked");
+                    await App.Current.MainPage.DisplayAlert("Alert", "Select at least one product you would like to use.", "OK");
+                } else {
+                    //go to recipies that we got page
+                    await Application.Current.MainPage.Navigation.PushAsync(new RecipesUrlsPage(recipiesList));
+                }
             });
 
             // build list of food from in fridge from hhtp call of data base

@@ -6,9 +6,10 @@
              xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              xmlns:zxcm="clr-namespace:ZXing.Common;assembly=zxing.portable"
              Title="Smart Fridge"
-             BackgroundColor="Black"
-             
+           
+             BackgroundImage="app_main.jpeg"
              >
+
     <ContentPage.BindingContext>
         <local:MainViewModel x:Name="mainViewModel"/>
     </ContentPage.BindingContext>
@@ -16,7 +17,7 @@
     <StackLayout>
         <zxing:ZXingScannerView x:Name="BarcodeScanView" IsVisible="false" HeightRequest="200" OnScanResult="OnScanResult" />
  
-        <StackLayout x:Name="MainLayout" Margin="0,20" >
+        <StackLayout x:Name="MainLayout" Margin="0,140" >
        
             <!--
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
@@ -34,12 +35,13 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
-                    CornerRadius="25"
-                    WidthRequest="380"
-                    HeightRequest="120"
-                    FontSize="Large"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    FontAttributes="Bold"
+                    FontSize="Large" 
                     Text="Scan Product"
-                    BackgroundColor="MediumPurple"
+                    BackgroundColor="#B30086"
                     TextColor="White"
                     Clicked="OnScanBarcodeClicked"
                     CommandParameter="3"
@@ -51,12 +53,13 @@
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
-                    CornerRadius="25"
-                    WidthRequest="380"
-                    HeightRequest="120"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    FontAttributes="Bold"
                     FontSize="Large"
                     Text="Inventory"
-                    BackgroundColor="MediumPurple"
+                    BackgroundColor="#B30086"
                     TextColor="White"
                     Clicked="OnFoodButtonClicked"
                     CommandParameter="3"
@@ -68,12 +71,13 @@
 
              <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
-                    CornerRadius="25"
-                    WidthRequest="380"
-                    HeightRequest="120"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    FontAttributes="Bold"
                     FontSize="Large"
                     Text="Shopping List"
-                    BackgroundColor="MediumPurple"
+                    BackgroundColor="#B30086"
                     TextColor="White"
                     Clicked="OnShoppingListButtonClicked"
                     CommandParameter="3"
@@ -85,12 +89,13 @@
             </StackLayout>
               <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20">
                 <Button
-                    CornerRadius="25"
-                    WidthRequest="380"
-                    HeightRequest="120"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="60"
+                    FontAttributes="Bold"
                     FontSize="Large"
                     Text="Recepies"
-                    BackgroundColor="MediumPurple"
+                    BackgroundColor="#B30086"
                     TextColor="White"
                     Clicked="OnRecepiesClicked"
                     CommandParameter="3"

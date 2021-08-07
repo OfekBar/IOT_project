@@ -4,23 +4,23 @@
              xmlns:local="clr-namespace:CounterApp"
              x:Class="CounterApp.RecipePage"
              Title="Recepies"
-             BackgroundColor="White"
+             BackgroundImage="recepie_check.jpeg"
              >
     <ContentPage.BindingContext>
         <local:RecipePageViewModel/>
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
+        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="Transparent">
 
                   <Button
-                    CornerRadius="25"
-                    WidthRequest="100"
-                    HeightRequest="100"
+                    CornerRadius="10"
+                    WidthRequest="200"
+                    HeightRequest="60"
                     FontSize="Large"
                     Text="Get Recepies"
                   
-                    BackgroundColor="MediumPurple"
+                    BackgroundColor="#FFCC00"
                     TextColor="White"
                     Command="{Binding GetRecipeCommand}"                 
                     VerticalOptions="Center"
@@ -29,14 +29,14 @@
                 
                   />
                     
-              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="White" SeparatorColor="Transparent" >
+              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="Transparent" SeparatorColor="Transparent" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
                                     <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,10">
 
-                                         <CheckBox x:Name="CheckBox" CheckedChanged="OnCheckClick" BindingContext="{Binding Name}">
+                                         <CheckBox x:Name="CheckBox" CheckedChanged="OnCheckClick" BindingContext="{Binding Name}" Color="#FFCC00">
 
                                          </CheckBox>
 

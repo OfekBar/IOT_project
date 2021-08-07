@@ -4,15 +4,16 @@
              xmlns:local="clr-namespace:CounterApp"
              x:Class="CounterApp.FoodPage"
              Title="Inventory"
-             BackgroundColor="White"
+             
+             BackgroundImageSource="inventory_img.jpeg"
              >
     <ContentPage.BindingContext>
         <local:FoodPageViewModel/>
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="White">
-              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="White" SeparatorColor="Transparent" >
+        <StackLayout x:Name="MainLayout" Margin="0, 20" BackgroundColor="Transparent">
+              <ListView x:Name="MyList" ItemsSource="{Binding Products}" BackgroundColor="Transparent" SeparatorColor="Transparent" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -43,7 +44,7 @@
                                          <!--<Label Text="{Binding Barcode}" HorizontalOptions="Center"  Margin="0,5" TextColor="Aqua"/> -->
                                         
                                          <Button Text="+"
-                                                 BackgroundColor="MediumPurple"
+                                                 BackgroundColor="MediumVioletRed"
                                                  TextColor="white"
                                                  Command="{Binding BindingContext.IncProdAmountClicked, Source={x:Reference Name=MyList}}"
                                                  CommandParameter="{Binding .}"
@@ -58,7 +59,7 @@
                                          />
 
                                          <Button Text="-"
-                                                 BackgroundColor="MediumPurple"
+                                                 BackgroundColor="MediumVioletRed" 
                                                  TextColor="white"
                                                  Command="{Binding BindingContext.DecProdAmountClicked, Source={x:Reference Name=MyList}}"
                                                  CommandParameter="{Binding .}"

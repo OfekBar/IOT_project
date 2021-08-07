@@ -3,31 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CounterApp"
              x:Class="CounterApp.RecipesUrlsPage"
-             Title="Recipes Urls"
+             Title="Recipes"
              BackgroundColor="White"
+             BackgroundImage="recepies_return.jpeg"
              >
     <ContentPage.BindingContext>
         <local:RecipesUrlsPageViewModel/>
     </ContentPage.BindingContext>
 
-        <StackLayout x:Name="MainLayout" Margin="0, 20"  Orientation="Vertical">
-             <ListView x:Name="MyList" HasUnevenRows="True" ItemsSource="{Binding UrlList}" Background="White">
+    
+
+        <StackLayout x:Name="MainLayout" Margin="0, 20"  Orientation="Vertical" BackgroundColor="Transparent">
+             <ListView x:Name="MyList" HasUnevenRows="True" ItemsSource="{Binding UrlList}" BackgroundColor="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <ViewCell.View>
 
                                     <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
-
+                                    
                                         <Label LineBreakMode="WordWrap"  TextColor="Black" Padding="10,10" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" MaxLines="20">
                                             <Label.FormattedText>
                                                 <FormattedString>
                                                     <Span Text="{Binding Name}"/>
                                                     </FormattedString>
                                             </Label.FormattedText>
-                                        </Label>
+                                        </Label>                                    
                                     </StackLayout>
-                                   
+                                      
+                                           
                                 </ViewCell.View>
                             </ViewCell>
                         </DataTemplate>
@@ -36,6 +40,6 @@
         </StackLayout>
 
 
-
+   
 
 </ContentPage>

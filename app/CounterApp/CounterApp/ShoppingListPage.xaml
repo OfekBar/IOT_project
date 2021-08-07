@@ -4,29 +4,30 @@
              xmlns:local="clr-namespace:CounterApp"
              x:Class="CounterApp.ShoppingListPage"
              Title="Shopping List"
-             BackgroundColor="White"
+             BackgroundImage="shoping_list_img.jpeg"
              >
     <ContentPage.BindingContext>
         <local:ShoppingListPageViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout>
-        <StackLayout x:Name="MainLayout" Margin="0, 0" BackgroundColor="White">     
+    <StackLayout BackgroundColor="Transparent">
+        <StackLayout x:Name="MainLayout" Margin="0, 0" BackgroundColor="Transparent">     
           <Button
-                CornerRadius="25"
-                Text="Add To Shopping list"
+               
+                WidthRequest="100"
+                HeightRequest="60"
+                Text="Add To Shopping List"
                 FontSize="Large"
-                BackgroundColor="MediumPurple"
+                BackgroundColor="#734d26"
                 TextColor="White"
                 Command="{Binding AddCommand}"
                 CommandParameter="none"
                 VerticalOptions="Center"
                 Padding="0"
-                WidthRequest="100"
-                HeightRequest="100"          
+                       
              />
           
-              <ListView x:Name="MyList" ItemsSource="{Binding ShoppingList}" BackgroundColor="White" SeparatorColor="Transparent">
+              <ListView x:Name="MyList" ItemsSource="{Binding ShoppingList}" BackgroundColor="Transparent" SeparatorColor="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -39,11 +40,11 @@
                                                 HorizontalOptions="Center"
                                                 FontSize="Large"
                                                 FontAttributes="Bold"
-                                                Margin="0,0"
+                                                Margin="50,0"
                                                 TextColor="Black"/>
 
                                          <Button Text="Remove"
-                                                 BackgroundColor="MediumPurple"
+                                                 BackgroundColor="#734d26"
                                                  TextColor="White"
                                                  Command="{Binding BindingContext.removeProdClicked, Source={x:Reference Name=MyList}}"
                                                  CommandParameter="{Binding .}"

@@ -10,12 +10,28 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using ZXing;
 using Xamarin.Essentials;
+using System.Net;
 
 /**
  * logic of main page of app
  **/
 
 namespace CounterApp {
+
+    public class ProductNameHolder
+    {
+
+        //what we show for each product in the shopping list
+        public ProductNameHolder(string name)
+        {
+            this.Name = name;
+
+        }
+
+        [JsonPropertyName("productName")]
+        public string Name { get; set; }
+    }
+
 
     /** skeleton project code- not deleting because code is useful
     public class CountersData
@@ -180,14 +196,42 @@ namespace CounterApp {
         {
             //Console.WriteLine(result.Text); 
             string myUrl = BaseURL + result.Text;
+            
             var task = Task.Run(async () =>
             {
                 HttpResponseMessage httpResult = CallUrl(myUrl).Result;
-                //Console.WriteLine(httpResult.StatusCode);
-                string jsonData = await httpResult.Content.ReadAsStringAsync();
-                //Console.WriteLine(JsonSerializer.Deserialize<string>(jsonData));
+
+                if (httpResult.StatusCode == HttpStatusCode.NotFound)
+                {
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage.DisplayAlert("Alert", "Barcode is invalid", "OK");
+                    });
+
+                }
+                else
+                {
+                    string jsonData = await httpResult.Content.ReadAsStringAsync();
+                    Console.WriteLine("product is: " + jsonData);
+                    ProductNameHolder productNameContainer = JsonSerializer.Deserialize<ProductNameHolder>(jsonData);
+                    Console.WriteLine(productNameContainer.Name);
+
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+                        App.Current.MainPage.DisplayAlert("Alert", productNameContainer.Name + " added", "OK");
+                    });
+
+                    
+
+                    
+
+                   
+                }
+
+               
+
             });
-          
+
         }
     }
 }
