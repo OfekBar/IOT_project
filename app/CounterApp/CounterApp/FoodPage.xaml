@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CounterApp"
              x:Class="CounterApp.FoodPage"
-             Title="Inventory"
-             
-             BackgroundImageSource="inventory_img.jpeg"
-             >
+             Title="Inventory"             
+             BackgroundImageSource="inventory_img.jpeg">
     <ContentPage.BindingContext>
         <local:FoodPageViewModel/>
     </ContentPage.BindingContext>
@@ -19,7 +17,6 @@
                             <ViewCell>
                                 <ViewCell.View>
                                     <StackLayout HeightRequest="100" Orientation="Horizontal" Margin="24,4">
-
                                          <Label
                                              WidthRequest="300"
                                              Text="{Binding Name}"
@@ -32,6 +29,7 @@
                                          />
 
                                          <Label
+                                            
                                              HorizontalTextAlignment="End"
                                              WidthRequest="50"
                                              Text="{Binding Amount}"

@@ -184,5 +184,17 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\.DS_Store" />
+    <BundleResource Include="Resources\shoping_list_img.jpeg" />
+    <BundleResource Include="Resources\app_main.jpeg" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\download.jpg" />
+    <BundleResource Include="Resources\inventory_img.jpeg" />
+    <BundleResource Include="Resources\pic.jpg" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\recepie_check.jpeg" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\recepies_return.jpeg" />
   </ItemGroup>
 </Project>
