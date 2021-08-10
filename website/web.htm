@@ -523,23 +523,25 @@ img {
 <li> ZXing</li>
 <li>Xamarin.Essentials</li>
 </ul>
-<p>Our application has 4 main buttons, each leading to different pages. Each page has multiple <u>code files</u>: </p>
-<img src="https://webimgs.blob.core.windows.net/images/app_main.jpe" alt="" width="200" height="400"/>
+<p>Our application has 4 main buttons, each leading to different pages. </p>
+<img src="https://webimgs.blob.core.windows.net/images/app_main.jpe" alt="" width="200" height="400"/> <p>Each page has multiple <u>code files</u>:</p>
 <p></p>
 <ol>
 <li>An <b>.xaml </b>file (like “mainpage.xaml”) building the page in the app. </li>
-<li>An <b> .xaml.cs </b>file (like “mainpage.xaml.cs”) determining how the page will be shown to user in the app itself. </li>
-<li>A <b>.cs </b> file (like “mainViewModel.cs”) containing the functions on the page. </li>
+<li>An <b> .xaml.cs </b>file (like “mainpage.xaml.cs”) determining how the page will be shown to the user in the app itself. </li>
+<li>A <b>.cs </b> file (like “mainViewModel.cs”) containing the functions and logic of the page. </li>
 </ol>
 <p>Design files are mostly the same, only minor detail differentiate them (like bullets for Recipe page or table for recipe url page). The files drastically changed from page to page are the viewModel.cs files, so we will elaborate on them separately: </p>
 <dl>
-<dt align="center">MainViewModel.cs</dt><dd> This file refers to the <b> Scan Product </b> button. We define client to work with cloud function: <i>Add_product_to_list</i>.  We use the phone’s camera to scan barcode and add product to inventory according to it. </dd>
-<p></p><p align="center"><img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/app_inventory.jpe" alt="" width="200" height="400"/>
+<dt align="center">MainViewModel.cs</dt><dd> This file refers to the <b>home screen</b> and the <b>Scan Product </b> button. We define client to work with cloud function: <i>Add_product_to_list</i>.  We use the phone’s camera to scan barcode and add product to inventory according to it. </dd>
+<p></p><p align="center"><img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/app_main.jpe" alt="" width="200" height="400"/>
 <img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/invalid_barcode.jpe" alt="" width="200" height="400"/>
 <img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/valid_barcode.jpeg" alt="" width="200" height="400"/></p>
 <p></p>
 <dd>If the scanned barcode was identified, the user will get an alert that the prodcut was added successfully to the list (see right most photo). If the scanned barcode is invalid and cannot be added to the fridge, the user will get an alert (see center photo) and the list will stay the same.</dd>
-<dt align="center">FoodPageViewModel.cs</dt> <dd> First, we define <b>Product</b> class, with <i>name, amount</i> and <i>barcode fields</i>, to be used per food product we handle. Next, we define http client to speak with 3 of our inventory cloud functions, <i> GetInventory, incProduct,</i> and <i> decProduct </i> which will be elaborated on in the next section. Lastly, we define the inventory view model, telling it how to call upon each of our inventory cloud functions and to refresh the page after all work is done. </dd>
+<dt align="center">FoodPageViewModel.cs</dt>
+<img src="https://webimgs.blob.core.windows.net/images/app_inventory.jpe" alt="" width="200" height="400"/>
+ <dd> First, we define <b>Product</b> class, with <i>name, amount</i> and <i>barcode fields</i>, to be used per food product we handle. Next, we define http client to speak with 3 of our inventory cloud functions, <i> GetInventory, incProduct,</i> and <i> decProduct </i> which will be elaborated on in the next section. Lastly, we define the inventory view model, telling it how to call upon each of our inventory cloud functions and to refresh the page after all work is done. </dd>
 <dt align="center">ShoppingListPageViewModel.cs</dt>
 <p></p><img src="https://webimgs.blob.core.windows.net/images/app_shopping.jpe" alt="" width="200" height="400"/><p></p>
 <dd>  We use http client to work with shopping list’s cloud functions: <i> getShoppingList, AddItemToShoppingList </i> and <i> RemoveProdFromShoppingList </i> which will be elaborated on in the next section. We define the shopping list’s view model, telling it how to call upon each of our cloud functions, present, add or remove from shopping list accordingly and to refresh the page after all work is done. Note, that each product can only be added once to the list. </dd>
