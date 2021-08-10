@@ -466,6 +466,12 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
     height: 450px;
   }
 }
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Webflow" name="generator"/>
@@ -477,29 +483,29 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 </script>
 </head><body><div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" class="left-navigation w-nav"><a href="#" class="logo-link w-nav-brand">
 <h1 class="brand-text">SmartFridge</h1></a><nav role="navigation" class="nav-menu w-nav-menu"><a href="#home" class="nav-link w-nav-link">Home</a>
-<a href="#about" class="nav-link w-nav-link">Documentation</a>
+<a href="#about" class="nav-link w-nav-link">Project Build</a>
 <a href="#gallery" class="nav-link w-nav-link">Gallery</a>
 
 </nav><div class="hamburger-button w-nav-button"><div class="w-icon-nav-menu"></div></div>
 </a></div></div><div class="content">
-<div id="home" class="banner"><div class="hero-title-wrapper"><h1 class="hero-heading">SmartFridge</h1><div class="hero-subheading"><p>Smart fridge's goal is to help users easily manage food supplies. The app allows users to track refrigerator content and maintain</p><p> a semi-automatic shopping-list. In addition, it allows the user to find recipes made of available ingredients.</p> </div><div><a href="https://github.com/OfekBar/IOT_project" class="hollow-button red">   GitHub      <img src="C:\Users\ofek\Desktop\HW\IoT\website\img\github.png" alt=""width="48" height="42"/></a></div></div>
+<div id="home" class="banner"><div class="hero-title-wrapper"><h1 class="hero-heading">SmartFridge</h1><div class="hero-subheading"><p>Smart fridge's goal is to help users easily manage food supplies. The app allows users to track refrigerator content and maintain</p><p> a shopping-list. In addition, it allows the user to find recipes made of available ingredients.</p> </div><div><a href="https://github.com/OfekBar/IOT_project" class="hollow-button red">   GitHub      <img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/github.PNG" alt=""width="48" height="42"/></a></div></div>
 </div><section id="about" class="section"><div class="w-container"><div class="section-title-group">
 <h2 class="section-heading centered">Project Build</h2>
-</div><div class="w-row"><div class="column-0-padding w-col w-col-3"><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\ios.png" width="100" alt="" class="grid-image"/>
-<h3>Mobile App</h3><p>detailed documentation of our mobile app code.</p>
+</div><div class="w-row" align="center"><div class="column-0-padding w-col w-col-3"><img src="https://webimgs.blob.core.windows.net/images/ios.PNG" width="100" alt="" class="grid-image"/>
+<h3>Mobile App</h3><p>Detailed documentation of our mobile app code.</p>
 <a href="#appCode" class="link">read more...</a></div><div class="column-0-padding w-col w-col-3">
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\cloud_icon.png" width="100" alt="" class="grid-image"/>
-<h3>Azure code</h3><p>detailed documentation of our cloud code.</p>
-<a href="#azureCode" class="link">read more...</a></div><div class="column-0-padding w-col w-col-3"><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\flow_icon.png" width="100" alt="" class="grid-image"/>
+<img src="https://webimgs.blob.core.windows.net/images/cloud_icon.PNG" width="100" alt="" class="grid-image"/>
+<h3>Azure code</h3><p>Detailed documentation of our cloud code.</p>
+<a href="#azureCode" class="link">read more...</a></div><div class="column-0-padding w-col w-col-3"><img src="https://webimgs.blob.core.windows.net/images/flow_icon.PNG" width="100" alt="" class="grid-image"/>
 <h3>Work Flow</h3><p>Our workflow charts.</p>
-<a href="#workflow" class="link">read more...</a></div><div class="column-0-padding w-col w-col-3"><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\guide_icon.png" width="100" alt="" class="grid-image"/>
-<h3>User Menual</h3><p>the user menual.</p>
+<a href="#workflow" class="link">read more...</a></div><div class="column-0-padding w-col w-col-3"><img src="https://webimgs.blob.core.windows.net/images/guide_icon.PNG" width="100" alt="" class="grid-image"/>
+<h3>User Menual</h3><p>The user menual.</p>
 <a href="#guide" class="link">to the guide!</a></div></div></div></section>
 
 <section id="appCode" class="section"><div class="w-container"><div class="section-title-group">
 <h2 class="section-heading centered">Our Application Code</h2>
 
-<p>In this section are details on the mobile app and all of it’s code files. The files can be found on our Github. It is important to note that our application is built for IOS. </p>
+<p>In this section are details on the mobile app and all of it’s code files. The files can be found on our Github. </p>
 <p><u>The packages</u> we used for the app code are as follows: </p>
 <ul>
 <li>System.ComponentModel</li>
@@ -518,7 +524,7 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 <li>Xamarin.Essentials</li>
 </ul>
 <p>Our application has 4 main buttons, each leading to different pages. Each page has multiple <u>code files</u>: </p>
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\app_main.jpe" alt="" width="200" height="400"/>
+<img src="https://webimgs.blob.core.windows.net/images/app_main.jpe" alt="" width="200" height="400"/>
 <p></p>
 <ol>
 <li>An <b>.xaml </b>file (like “mainpage.xaml”) building the page in the app. </li>
@@ -527,31 +533,37 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 </ol>
 <p>Design files are mostly the same, only minor detail differentiate them (like bullets for Recipe page or table for recipe url page). The files drastically changed from page to page are the viewModel.cs files, so we will elaborate on them separately: </p>
 <dl>
-<dt>MainViewModel.cs</dt><dd> This file refers to the <b> Scan </b> button. We define client to work with cloud function: <i>Add_product_to_list</i>.  We use the phone’s camera to scan barcode and add product to inventory according to it. </dd>
-<p></p><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\app_inventory.jpe" alt="" width="200" height="400"/><p></p>
-<dt>FoodPageViewModel.cs</dt> <dd> first, we define <b>Product</b> class, with <i>name, amount</i> and <i>barcode fields</i>, to be used per food product we handle. Next, we define http client to speak with 3 of our inventory cloud functions, <i> GetInventory, incProduct,</i> and <i> decProduct </i> which will be elaborated on in the next section. Lastly, we define the inventory view model, telling it how to call upon each of our inventory cloud functions and to refresh the page after all work is done. of course, we take care of technical details as well, such as synchronicity between functions, input’s regularity etc. </dd>
-<dt>ShoppingListPageViewModel.cs</dt>
-<p></p><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\app_shopping.jpe" alt="" width="200" height="400"/><p></p>
-<dd>  First, we open http client to work with shooping llist’s cloud functions: <i> getShoppingList, AddItemToShoppingList </i> and <i> RemoveProdFromShoppingList </i> which will be elaborated on in the next section. next, we define the shopping list’s view model, telling it how to call upon each of our cloud functions, present, add or remove from shopping list accordingly and to refresh the page after all work is done. of course, we take care of technical details as well, such as synchronicity between functions, input’s regularity etc. </dd>
-<dt>RecipePageViewModel.cs</dt> 
-<p></p><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\app_recepie_check.jpe" alt="" width="200" height="400"/><p></p>
-<dd> First, we define http client to speak with 2 cloud functions, <i> GetInventory,</i> and <i> getRecipies </i> which will be elaborated on in the next section. We work with 3 variables; a list of products, checklist the user provides and the recipe list we showcase at the end.  the products are our inventory, which we get from cloud and present to the user. The user, in turn, checks the products he is interested in and those are sent to the <i>getRecipies</i> cloud function, returning recipe list. The list is than handled and transformed into json format later inserted to .xml mold to be shown in app. Of course, we take care of technical details as well, such as synchronicity between functions, input’s regularity etc. </dd>
-<dt>RecipesUrlsPageViewModel.cs</dt>
-<p></p><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\app_recepie_present.jpe" alt="" width="200" height="400"/><p></p>
-<dd> First, we define class <b> RecipeUrl</b> which is the format we need for ingredient list user wants to use in recipe. We get the checked items from user, format, then send to the <i>getRecipies</i> cloud function. The function’s output is handled by “RecipePageViewModel.cs”Of course, we take care of technical details as well, such as synchronicity between functions as well as with “RecipePageViewModel.cs”  , input’s regularity etc. </dd>
+<dt align="center">MainViewModel.cs</dt><dd> This file refers to the <b> Scan Product </b> button. We define client to work with cloud function: <i>Add_product_to_list</i>.  We use the phone’s camera to scan barcode and add product to inventory according to it. </dd>
+<p></p><p align="center"><img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/app_inventory.jpe" alt="" width="200" height="400"/>
+<img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/invalid_barcode.jpe" alt="" width="200" height="400"/>
+<img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/valid_barcode.jpeg" alt="" width="200" height="400"/></p>
+<p></p>
+<dd>If the scanned barcode was identified, the user will get an alert that the prodcut was added successfully to the list (see right most photo). If the scanned barcode is invalid and cannot be added to the fridge, the user will get an alert (see center photo) and the list will stay the same.</dd>
+<dt align="center">FoodPageViewModel.cs</dt> <dd> First, we define <b>Product</b> class, with <i>name, amount</i> and <i>barcode fields</i>, to be used per food product we handle. Next, we define http client to speak with 3 of our inventory cloud functions, <i> GetInventory, incProduct,</i> and <i> decProduct </i> which will be elaborated on in the next section. Lastly, we define the inventory view model, telling it how to call upon each of our inventory cloud functions and to refresh the page after all work is done. </dd>
+<dt align="center">ShoppingListPageViewModel.cs</dt>
+<p></p><img src="https://webimgs.blob.core.windows.net/images/app_shopping.jpe" alt="" width="200" height="400"/><p></p>
+<dd>  We use http client to work with shopping list’s cloud functions: <i> getShoppingList, AddItemToShoppingList </i> and <i> RemoveProdFromShoppingList </i> which will be elaborated on in the next section. We define the shopping list’s view model, telling it how to call upon each of our cloud functions, present, add or remove from shopping list accordingly and to refresh the page after all work is done. Note, that each product can only be added once to the list. </dd>
+<dt align="center">RecipePageViewModel.cs</dt> 
+<p></p><p align="center"><img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/app_recepie_check.jpe" alt="" width="200" height="400"/>
+<img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/no_prod_selected.jpe" alt="" width="200" height="400"/></p><p></p>
+<dd> First, we define http client to speak with 2 cloud functions, <i> GetInventory,</i> and <i> getRecipies </i> which will be elaborated on in the next section. We work with 3 variables; a list of products, checklist the user provides and the recipe list we showcase at the end. The products are our inventory, which we get from cloud and present to the user. The user, in turn, checks the products he is interested in and those are sent to the <i>getRecipies</i> cloud function, returning recipe list. The list is than handled and transformed into json format later inserted to .xml mold to be shown in the app. However, clicking the "Get Recepies" button without choosing any ingredients will resolve to an alert message. </dd>
+<dt align="center">RecipesUrlsPageViewModel.cs</dt>
+<p></p><img src="https://webimgs.blob.core.windows.net/images/app_recepie_present.jpe" alt="" width="200" height="400"/><p></p>
+<dd> We define class <b> RecipeUrl</b> which is the format we want the ingredient list to be in. We get the checked items from user, format, then send to the <i>getRecipies</i> cloud function. The function’s output is handled by “RecipePageViewModel.cs”. </dd>
 </dl>
-<p> <b>Another</b> folder that has to do with our mobile app is “SmartFridge.iOS”. This folder is standard and contains base files provided by VisualStudio itself. Our additions to this folder lay in the ”Resources” folder, where we placed all application images. </p>
+<p> <b>Another</b> folder that has to do with our mobile app is “SmartFridge.iOS”. This folder is standard and contains base files provided by VisualStudio itself. Our additions to this folder lay in the ”Resources” folder and the "Info.plist" file. In the Resources folder we placed all the application images. On the "Info.plist" file we added "Camera Usage Description" to allow usage of the camera when scanning. </p>
+<p><b>Notice that in all of the above functions, we take care of technical details as well. Such as synchronicity between functions, input’s regularity etc.</b></p>
 
+<img src="https://webimgs.blob.core.windows.net/images/line.png"/></section>
 
-</section>
 <section id="azureCode" class="section"><div class="w-container"><div class="section-title-group">
 <h2 class="section-heading centered">Our Cloud code</h2>
 
 <p>In this section are details on the cloud code files and other resources we used in our project. The files can be found on our Github and are written in C#.</p>
 <h4>External resources</h4>
 <ul>
-<li> For our recipe feature we used <a href=https://spoonacular.com/food-api> Spoonacular API</a>. This API has many functions regarding cooking, like wine matching, calorie counting etc. We used its “get recipe by ingirideints” function, which gets a list of ingredients and returns a list of recipes using them. We use our own API key to communicate with this function, our subscription allows 150 points := 136 requests for our needs.</li>
-<li>Since menually adding barcodes in nearly impossible, we found an excel file containing barcodes of most food products sold in Israel. We edited it to be more user-friendly and then converted it into azure table.</li
+<li> For our recipe feature we used <a href=https://spoonacular.com/food-api> Spoonacular API</a>. This API has many functions regarding cooking, like wine matching, calorie counting etc. We used the “get recipe by ingirideints” function, which gets a list of ingredients and returns a list of recipes using them. We use our own API key to communicate with this function, our subscription allows 150 points := 136 requests for our needs.</li>
+<li>Since menually adding barcodes in nearly impossible, we found an excel file containing barcodes of most food products sold in Israel. We edited it to be more user-friendly and then converted it into azure table using "Azure Storage Explorer" app.</li
 </ul>
 <h4>Cloud Resources</h4>
 <ul>
@@ -560,7 +572,7 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 <ul>
 <li><u>FridgeTable : </u> a table containing products currently in the fridge. Used by the “Add_product_to_list”, “GetInventory “, “incProduct” and ”decProduct” cloud functions, and shown in the “Inventory” page of the app.</li>
 <li><u>ShoppingListTable :  </u>a table containing products in the shopping list, used by “getShoppingList” cloud function, and shown in the “shopping list”page of the app.</li>
-<li><u>xbarcodes : </u> a table built out of an excel file documenting all barcodes sold in Israel. Since searching and manipulating an excel file was a bit complex, it was made into a simple yet massive cloud table.</li>
+<li><u>xbarcodes : </u> a table built out of an excel file documenting most products' barcodes sold in Israel.</li>
 </ul>
 </li>
 </ul>
@@ -587,46 +599,46 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 </ol>
 <p> <b> The functions:</b></p>
 <dl>
-<dt>AddItemToShoppingList/run.csx</dt>
-<dd>First, table entry is defined to have: partition key and row key. Then the code waits for user to type the name of the new item to add to the list. Once the name is received, it is converted into a table entry from product table. If it is not already in the product table, it is added. Once table entry is formatted, it is added to shopping list table on cloud. </dd>
-<dt> RemoveProdFromShoppingList/run.csx </dt>
-<dd> First, table entry is defined to have: partition key and row key. Then the code waits for user to type the name of the item to remove from the list. Once the name is received, it is converted into a table entry from product table, and deleted.</dd>
-<dt>barcodeToName/run.csx </dt>
-<dd>First, a table entry is defined to have: barcode, name, partition key and row key. The barcode is given to function from “Add_product_to_list” and is searched through cloud barcode database. When found, product name is returned, otherwise the string “not found” is returned. </dd>
-<dt> Add_product_to_list/run.csx</dt>
-<dd>First, table entry is defined to have: name, barcode, type, amount, partition key and row key. Given the barcode number by app function “MainViewModel”, this function uses “barcodeToName” cloud function to retrieve the product name based on its barcode. If the product was not in inventory before, it is added with amount=1 and all other table entry fields filled. If it was already in inventory, its table entry’s amount field increases by one.  </dd>
-<dt> GetInventory/run.csx </dt>
-<dd> First, table entry is defined to have: name, barcode, type, amount, partition key and row key. A new list is defined, to which the Inventory cloud table entries are written. The list is returned in Jason format. </dd>
-<dt>decProduct/run.csx </dt>
-<dd>First, a new http client is defined in order to communicate with cloud resources. Then, a table entry is defined to have: name, barcode, type, amount, partition key and row key. The barcode number is provided by the function “FoodPageViewModel”. The product’s name is precured with cloud function “barcodeToName”. Since the button triggering this function is only visible if product is in cloud inventory table, function checks the product’s amount without checking its existence. If there is only one of it, product is deleted from table, otherwise, the amount is decreased by one.  </dd>
-<dt> incProduct/run.csx </dt>
-<dd> First, a new http client is defined in order to communicate with cloud resources. Then, a table entry is defined to have: name, barcode, type, amount, partition key and row key. The barcode number is provided by the function “FoodPageViewModel”. The product’s name is precured with cloud function “barcodeToName”. Since the button triggering this function is only visible if product is in cloud inventory table, function checks the product’s amount without checking its existence and increases it by one.  </dd>
-<dt> getRecipies/run.csx</dt>
-<dd>A new http client is defined. Function gets a string of ingredients from “RecipePageViewModel” and transfers it to the API using a new request client. The ingredients are added at the end of the query link. The API returns Jason with recipes which the function formats into a separate list of recipes. That list is returned in a Jason format to “RecipePageViewModel” .</dd>
-<dt>getShoppingList/run.csx</dt>
-<dd>First, a table entry is defined to have: partition key and row key. Then, the shopping list is retrieved from cloud table and returned. </dd>
+<dt align="center">AddItemToShoppingList/run.csx</dt>
+<dd>Table entry is defined to have: partition key and row key. Then the code waits for the user to type the name of the new item to add to the list. Once the name is received, it is converted into a table entry from product table. If it is not already in the product table, it is added. Once table entry is formatted, it is added to shopping list table on the cloud. </dd>
+<dt align="center"> RemoveProdFromShoppingList/run.csx </dt>
+<dd> Table entry is defined to have: partition key and row key. Then the code waits for the user to type the name of the item to remove from the list. Once the name is received, it is converted into a table entry from product table, and deleted.</dd>
+<dt align="center">barcodeToName/run.csx </dt>
+<dd>Table entry is defined to have: barcode, name, partition key and row key. The barcode is given to the function from “Add_product_to_list” and is searched through cloud barcode database. When found, product name is returned. Otherwise the string “not found” is returned. </dd>
+<dt align="center"> Add_product_to_list/run.csx</dt>
+<dd>Table entry is defined to have: name, barcode, type, amount, partition key and row key. Given the barcode number by the function “MainViewModel”, it uses “barcodeToName” cloud function to retrieve the product name based on its barcode. If the product was not in the inventory before, it is added with amount = 1 and all other table entry fields are filled. If it was already in inventory, its table entry’s amount field increases by one.  </dd>
+<dt align="center"> GetInventory/run.csx </dt>
+<dd>Table entry is defined to have: name, barcode, type, amount, partition key and row key. A new list is defined, to which the Inventory cloud table entries are written. The list is returned in Json format. </dd>
+<dt align="center">decProduct/run.csx </dt>
+<dd>A new http client is defined in order to communicate with cloud resources. Then, a table entry is defined to have: name, barcode, type, amount, partition key and row key. The barcode number is provided by the function “FoodPageViewModel”. The product’s name is precured with cloud function “barcodeToName”. Since the button triggering this function is only visible if product is in cloud inventory table, function checks the product’s amount without checking its existence. If there is only one of it, product is deleted from table, otherwise, the amount is decreased by one.  </dd>
+<dt align="center"> incProduct/run.csx </dt>
+<dd> A new http client is defined in order to communicate with cloud resources. Then, a table entry is defined to have: name, barcode, type, amount, partition key and row key. The barcode number is provided by the function “FoodPageViewModel”. The product’s name is precured with cloud function “barcodeToName”. Since the button triggering this function is only visible if product is in cloud inventory table, function checks the product’s amount without checking its existence and increases it by one.  </dd>
+<dt align="center"> getRecipies/run.csx</dt>
+<dd>A new http client is defined. Function gets a string of ingredients from “RecipePageViewModel” and transfers it to the API using a new request client. The ingredients are added at the end of the query link. The API returns Json with recipes which the function formats into a separate list of recipes. That list is returned in a Json format to “RecipePageViewModel” .</dd>
+<dt align="center">getShoppingList/run.csx</dt>
+<dd>Table entry is defined to have: partition key and row key. Then, the shopping list is retrieved from cloud table and returned. </dd>
 </dl>
 <p><b>All function are programmed to work safely, in sync with each other, to alert in case of malfunctions, validate input and output’s regularity etc.</b> </p>
 
-
+<img src="https://webimgs.blob.core.windows.net/images/line.png"/>
 </section>
+
 <section id="workflow" class="section"><div class="w-container"><div class="section-title-group">
 <h2 class="section-heading centered">Workflow</h2><p> In order to make our app’s workflow clearer, here are charts detailing what happens once each one of our main buttons is pressed.</p>
 <h4> Scan Workflow:</h4>
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\flow_scan.png" alt=""/>
+<img src="https://webimgs.blob.core.windows.net/images/flow_scan.png" alt=""/>
 <h4> Inventory Workflow:</h4>
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\flow_inventory.png" alt=""/>
+<img src="https://webimgs.blob.core.windows.net/images/flow_inventory.png" alt=""/>
 <h4> Shopping List Workflow:</h4>
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\flow_shopping_list.png" alt=""/>
+<img src="https://webimgs.blob.core.windows.net/images/flow_shopping_list.png" alt=""/>
 <h4> Recipes Workflow:</h4>
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\flow_recepies.png" alt=""/>
+<img src="https://webimgs.blob.core.windows.net/images/flow_recepies.png" alt=""/>
+<!-- <img src="https://i.imgur.com/wWdY9tQ.png"/> -->
 
 </section>
 
 <section id="guide" class="section"><div class="w-container"><div class="section-title-group">
 <h2 class="section-heading centered">User Menual</h2>
-
-
 
 <h3>Main menu:</h3>
 <p> Showcases the four main functions of the app. Each button leads to one of the following features:
@@ -635,51 +647,52 @@ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0
 <li> <b> Inventory:</b> Showcases the fridges content.</li>
 <li> <b> Shopping List:</b> Showcases the user’s shopping list.</li>
 <li> <b> Recipes:</b> Allows user to search for recipes requiring the available ingredients in the fridge.</li>
-</ol>
+</ol></p>
 <p>Detailed instructions on how to operate each screen are below.</p>
 <h3> scanning page </h3>
 <p>When scan button is pressed, the phone’s camera will automatically open and search for barcode image. User must place the item directly in front of the camera, horizontally, otherwise, barcode may not be read properly or at all. Once camera detected a barcode, a notification will pop up telling user which product was added successfully. If barcode detection failed or the detected barcode was not found in our database, the user will be informed and is welcome to try again..</p>
 <b> Demonstration:</b>
-<p><video width="220" height="340"controls>
-<source src="https://img4site.blob.core.windows.net/images/add_to_fridge.mp4" type="video/mp4">
+<p align="center"><video width="220" height="340"controls>
+<source src="https://webimgs.blob.core.windows.net/images/scan.mp4" type="video/mp4"/>
 <source src="movie.ogg" type="video/ogg"></video></p>
 <h3> Inventory page</h3>
-<p>When inventory button is pressed, the user is presented with a list of all products currently in the refrigerator. Other than simply viewing the list, the user can <b>decrease</b> or <b>increase</b> the amount of product, depending on if the user just took the product <b>out</b> of the fridge, or placed another unit of the product <b>in</b> the fridge. This control of the number of units of a product comes from the ‘+’ and ‘-‘ buttons, presented next to each product. If user decreased a product’s amount to zero, the product will no longer be shown in the inventory page.</p>
+<p>When inventory button is pressed, the user is presented with a list of all products currently in the refrigerator. Other than simply viewing the list, the user can <b>decrease</b> or <b>increase</b> the amount of product, depending on if the user just took the product <b>out</b> of the fridge, or placed another unit of the product <b>inside</b> the fridge. This control of the number of units of a product comes from the ‘+’ and ‘-‘ buttons, presented next to each product. If user decreased a product’s amount to zero, the product will no longer be shown in the inventory page.</p>
 <b> Demonstration:</b>
-<p><video width="220" height="340"controls>
-<source src="https://img4site.blob.core.windows.net/images/add_to_fridge.mp4" type="video/mp4">
+<p align="center"><video width="220" height="340"controls>
+<source src="https://webimgs.blob.core.windows.net/images/inventory.mp4" type="video/mp4">
 <source src="movie.ogg" type="video/ogg"></video></p>
 <h3>Shopping List page</h3>
-<p>When the shopping list button is pressed, the user is presented with a list of all products currently in the refrigerator, under the assumption that those products are the basic ones consumed by the user. Of course, the user can press the ‘remove’ button if there are unnecessary products, and the ‘add’ button at the top of the page in order to manually add products to the shopping list. This feature allows the user to constantly update and edit the shopping list (even if user recalls a needed product in the middle of the night), so that the list is always ready to use.</p>
+<p>At first use, when the shopping list button is pressed, the user is presented with an empty list. He can start creating his list by using the "Add To Shopping List" option at the top of the screen. After the first use, the list is updated and the same items will appear again by clicking on the shopping list button. The user can press the ‘remove’ button if there are unnecessary products, and the ‘add’ button in order to manually add more products to the shopping list. This feature allows the user to constantly update and edit the shopping list (even if user recalls a needed product in the middle of the night), so that the list is always ready to use.</p>
 <b> Demonstration:</b>
-<p><video width="220" height="340"controls>
-<source src="https://img4site.blob.core.windows.net/images/add_to_fridge.mp4" type="video/mp4">
+<p align="center"><video width="220" height="340"controls>
+<source src="https://webimgs.blob.core.windows.net/images/shopping_list.mp4" type="video/mp4">
 <source src="movie.ogg" type="video/ogg"></video></p>
 <h3> Recipes page </h3>
 <p>When the recipes button is pressed, the user is presented with a list of all products currently in the fridge. It is up to the user to mark a few of them, to be used by the recipes the app returns later. It is <u>mandatory </u>to mark at least one product. Once the user chooses which ingredients they would like to use, they may press the ‘get recipes’ button at the top of the screen. Soon, the user will be presented with a new screen, where up to 10 befitting recipes will be presented.</p>
 <b> Demonstration:</b>
-<p><video width="220" height="340"controls>
-<source src="https://img4site.blob.core.windows.net/images/add_to_fridge.mp4" type="video/mp4">
+<p align="center"><video width="220" height="340"controls>
+<source src="https://webimgs.blob.core.windows.net/images/get_recipes.mp4" type="video/mp4">
 <source src="movie.ogg" type="video/ogg"></video></p>
 
 </section>
 
-<section class="call-to-action-section"><div class="w-container"><div class="w-row">
+<section class="call-to-action-section"><div class="w-container w-row"><div class="w-row">
 <div class="w-col w-col-8"><h5>Ofek Bar: ofekbar@tau.mail.ac.il</h5>
 <h5>Mor Buchnik: buchnik@tau.mail.ac.il</h5>
-<h5> Neo Eyal: neoeyal@tau.mail.ac.il </div><div class="align-right w-col w-col-4"><a href="https://mail.google.com" class="hollow-button red"><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\contact us.png" alt="" width="48" height="42"/><p></p>Contact us!</a></div></div></div></section>
+<h5> Neo Eyal: neoeyal@tau.mail.ac.il </div><div class="align-right w-col w-col-4"><a href="https://mail.google.com" class="hollow-button red"><img src="https://webimgs.blob.core.windows.net/images/contact us.PNG" alt="" width="48" height="42"/><p></p>Contact us!</a></div></div></div></section>
 
 <section id="gallery" class="section"><div class="w-container"><div class="section-title-group">
-<h2 class="section-heading centered"><img src="C:\Users\ofek\Desktop\HW\IoT\website\img\gallery_icon.png" alt="" width="55" height="32"/>Gallery<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\gallery_icon.png" alt="" width="55" height="32"/> </h2><div class="section-subheading center">Here are some more screenshots from the app other tha main screens.</div>
+<h2 class="section-heading centered"><img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/gallery_icon.PNG" alt="" width="55" height="32"/>Gallery<img class="w-inline-block" src="https://webimgs.blob.core.windows.net/images/gallery_icon.PNG" alt="" width="55" height="32"/> </h2><div class="section-subheading center">Here are some more screenshots from the app.</div>
 </div>
+
 <a class="grid-fours w-inline-block w-lightbox">
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\add_to_list.jpe" alt=""/> A user trying to menually add a new product to shopping list</a>
+<img src="https://webimgs.blob.core.windows.net/images/add_to_list.jpe" alt=""/> A user trying to menually add a new product to shopping list</a>
 <a class="grid-fours w-inline-block w-lightbox">
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\no_prod_selected.jpe" alt=""/> A user trying ask for recipes without checking any ingredients</a>
+<img src="https://webimgs.blob.core.windows.net/images/no_prod_selected.jpe" alt=""/> A user trying ask for recipes without checking any ingredients</a>
 <a class="grid-fours w-inline-block w-lightbox">
-<img src="C:\Users\ofek\Desktop\HW\IoT\website\img\invalid_barcode.jpe" alt=""/> A user scanned barcode is invalid and cannot be added to the fridge</a>
+<img src="https://webimgs.blob.core.windows.net/images/invalid_barcode.jpe" alt=""/> A scanned barcode is invalid and cannot be added to the fridge</a>
 </section>
 
-
+</body>
 <script type="application/json" class="w-json">{
  
